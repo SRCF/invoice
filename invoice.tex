@@ -1,0 +1,98 @@
+\documentclass[a4paper]{letter}
+
+%
+% Definitions you will want to change.
+%
+
+\newcommand{\myname}{Student Run Computing Facility}
+
+\newcommand{\mydetails}{%
+	\myname \\%
+	c/o Cambridge University Students' Union \\%
+	Old Examination Hall \\%
+	Free School Lane \\%
+	Cambridge \\%
+	CB2 3RF \\%
+	United Kingdom \\%
+}
+
+\newcommand{\invoicedate}{01/01/1970}
+
+\newcommand{\invoicereference}{000-00000}
+
+\newcommand{\invoiceto}{%
+	Recipient \\%
+	Street \\%
+	City \\%
+	Region \\%
+	Postal Code \\%
+	Country \\%
+}
+
+\newcommand{\accountname}{\myname}
+\newcommand{\accountnum}{CHANGEME}
+\newcommand{\accountsort}{CHANGEME}
+
+%
+% Document structure you probably want to leave (except for the Items table)
+%
+
+\usepackage{calc}
+\usepackage{tabularx}
+\thispagestyle{empty}
+\newcommand{\gap}{30pt}
+
+\begin{document}
+	\begin{center}
+		\mydetails
+	\end{center}
+
+	\vspace{\gap}
+
+	\begin{center}
+		\LARGE{INVOICE}
+	\end{center}
+
+	\vspace{\gap}
+
+	Date: \invoicedate
+	\hfill
+	Reference: \invoicereference
+
+	\vspace{\gap}
+
+	\invoiceto
+
+	\vspace{\gap}
+
+%
+% Item table - you will want to edit this
+%
+
+	\begin{center}
+		\begin{tabularx}{\textwidth}{ | X | c | }
+			\hline
+			\textbf{Item} & \textbf{Amount} \\
+			\hline
+			Sponsorship & \textsterling 250 \\
+			\hline
+			\textbf{Total:} & \textsterling 250 \\
+			\hline
+		\end{tabularx}
+	\end{center}
+
+	\vspace{\gap}
+	\vspace{\gap}
+	\hrule
+	\vspace{\gap}
+
+	\begin{center}
+		\begin{tabular}{ r l }
+			Please pay by bank transfer to: & \accountname \\
+			Account Number: & \accountnum \\
+			Sort Code: & \accountsort \\
+			Reference: & \invoicereference \\
+		\end{tabular}
+	\end{center}
+
+\end{document}
